@@ -37,7 +37,7 @@ echo -e "$nullaway_config_path\t$scanner_config_path" > util/annotator-out/paths
 java -jar annotator-core-1.3.15.jar \
     -bc "cd /home/ankit/fork/WALA && ./gradlew util:compileJava" \
     -d "$annotator_out_dir" \
-    -n javax.annotation.Nullable \
+    -n org.jspecify.annotations.Nullable \
     -cp util/annotator-out/paths.tsv \
     -cn NULLAWAY \
     -i com.uber.nullaway.annotations.Initializer \

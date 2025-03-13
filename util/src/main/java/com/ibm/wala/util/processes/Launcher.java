@@ -32,11 +32,11 @@ public abstract class Launcher {
 
   protected @Nullable Map<String, String> env = null;
 
-  protected byte @Nullable [] stdOut = null;
+  protected byte[] stdOut = null;
 
-  protected byte @Nullable [] stdErr = null;
+  protected byte [] stdErr = null;
 
-  private byte @Nullable [] input = null;
+  private byte [] input = null;
 
   /** capture the contents of stdout? */
   private final boolean captureOutput;

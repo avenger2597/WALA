@@ -33,6 +33,7 @@ plugins {
 repositories {
   // to get the google-java-format jar and dependencies
   mavenCentral()
+  mavenLocal()
 }
 
 val osName: String by extra(System.getProperty("os.name"))

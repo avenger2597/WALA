@@ -8,19 +8,25 @@ plugins {
   id("net.ltgt.errorprone")
 }
 
+repositories {
+  // to get the google-java-format jar and dependencies
+  mavenCentral()
+  mavenLocal()
+}
+
 eclipse.project.natures("org.eclipse.pde.PluginNature")
 
 dependencies {
   // Annotation processors
-  annotationProcessor("edu.ucr.cs.riple.annotator:annotator-scanner:1.3.6")
-  annotationProcessor("com.uber.nullaway:nullaway:0.10.10")
+  annotationProcessor("edu.ucr.cs.riple.annotator:annotator-scanner:1.3.16-SNAPSHOT")
+  annotationProcessor("com.uber.nullaway:nullaway:0.12.4")
 
   // ErrorProne and its javac
   errorprone("com.google.errorprone:error_prone_core:2.4.0")
   errorproneJavac("com.google.errorprone:javac:9+181-r4173-1")
 
   // Needed annotations
-  compileOnly("com.uber.nullaway:nullaway-annotations:0.10.10")
+  compileOnly("com.uber.nullaway:nullaway-annotations:0.12.4")
   compileOnly("com.google.code.findbugs:jsr305:3.0.2")
   compileOnly("org.jspecify:jspecify:0.3.0")
 
