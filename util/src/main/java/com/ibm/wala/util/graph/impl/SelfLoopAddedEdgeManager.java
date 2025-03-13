@@ -27,7 +27,7 @@ public class SelfLoopAddedEdgeManager<T> implements EdgeManager<T> {
     }
 
     @Override
-    public @Nullable T next() {
+    public T next() {
       if (!usedFirst) {
         T tmp = first;
         first = null;

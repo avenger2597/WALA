@@ -27,6 +27,7 @@ plugins {
   id("com.ibm.wala.gradle.eclipse-maven-central")
   id("com.ibm.wala.gradle.maven-eclipse-jsdt")
   id("com.ibm.wala.gradle.project")
+  id("net.ltgt.errorprone") version "3.1.0" apply false
 }
 
 repositories {
